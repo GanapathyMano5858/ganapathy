@@ -1,0 +1,84 @@
+:root {
+  --PrimaryColor: #089848;
+  --SecondaryColor: #151515;
+  --gradientColor: linear-gradient(to right, #18bb77, #0bb76f);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: #171717;
+  --textColor: #0a223d;
+  --paraColor: #4d5b7c;
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayText: #8b8b8b;
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+  --cardHover: rgb(255, 255, 255);
+
+  --link: #127384;
+
+  --fontSize13: 13px;
+
+  --font100: 100;
+  --font200: 200;
+  --font300: 300;
+  --font400: 400;
+  --font500: 500;
+}
+
+.navbar-brand {
+  width: 150px;
+}
+
+.NavBarLink {
+  font-weight: 500 !important;
+  color: var(--SecondaryColor) !important;
+  font-size: 18px !important;
+}
+.agentLoginBtn {
+  border: none;
+  color: var(--whiteColor);
+  padding: 5px 15px;
+  background-color: var(--PrimaryColor);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.navBarBackGround {
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 24%);
+  background-color: var(--whiteColorDeam);
+}
+
+/* start NavBar link style for bottom line */
+
+.NavBarLink {
+  cursor: pointer;
+  position: relative;
+}
+
+.NavBarLink::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 2px;
+  bottom: 0px;
+  left: 20px;
+  transform: scaleX(0);
+  background: var(--PrimaryColor);
+  transform-origin: center;
+  transition: transform 0.5s ease-out;
+}
+
+.NavBarLink:hover::after {
+  color: var(--blackColor);
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.NavBarLink.active::after {
+  transform: scaleX(1);
+  background: var(--PrimaryColor);
+  transform-origin: center;
+}
+
+/* end NavBar link style for bottom line */
+
+  
